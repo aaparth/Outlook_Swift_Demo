@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="241-Mn-OnG">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Orr-wx-t9d">
+            <objects>
+                <viewController id="241-Mn-OnG" customClass="ViewController" customModule="Outlook_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8xZ-Ig-x41"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z37-XK-7eJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CUM-P4-3dJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qut-gj-hNW">
+                                <rect key="frame" x="164" y="89" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="callGraphButton:" destination="241-Mn-OnG" eventType="touchUpInside" id="O8m-Pi-qSL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEi-8t-ygK">
+                                <rect key="frame" x="164" y="232" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="signoutButton:" destination="241-Mn-OnG" eventType="touchUpInside" id="tXu-ZV-fB1"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Dab-BU-Sph">
+                                <rect key="frame" x="67" y="293" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="dcm-3d-QbP"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qut-gj-hNW" firstAttribute="top" secondItem="8xZ-Ig-x41" secondAttribute="bottom" constant="69" id="0OM-dJ-tKM"/>
+                            <constraint firstItem="Z37-XK-7eJ" firstAttribute="top" secondItem="Dab-BU-Sph" secondAttribute="bottom" constant="246" id="0P0-uS-ax5"/>
+                            <constraint firstItem="Dab-BU-Sph" firstAttribute="leading" secondItem="CUM-P4-3dJ" secondAttribute="leadingMargin" constant="51" id="IPK-XB-fOP"/>
+                            <constraint firstItem="VEi-8t-ygK" firstAttribute="centerX" secondItem="Dab-BU-Sph" secondAttribute="centerX" id="PrQ-Ft-MYl"/>
+                            <constraint firstItem="Dab-BU-Sph" firstAttribute="top" secondItem="VEi-8t-ygK" secondAttribute="bottom" constant="31" id="hYW-DM-Q6Q"/>
+                            <constraint firstItem="qut-gj-hNW" firstAttribute="centerX" secondItem="CUM-P4-3dJ" secondAttribute="centerX" id="nVp-Sn-XJR"/>
+                            <constraint firstItem="qut-gj-hNW" firstAttribute="leading" secondItem="VEi-8t-ygK" secondAttribute="leading" id="tI2-PN-8cI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loggingText" destination="Dab-BU-Sph" id="OSC-qe-0nu"/>
+                        <outlet property="signoutButton" destination="VEi-8t-ygK" id="F59-Cb-ia4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h0R-ha-4Lf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5089" y="-2007"/>
+        </scene>
+    </scenes>
+</document>
